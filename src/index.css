@@ -1,0 +1,11 @@
+body,
+html,
+#root {
+  height: 100vh;
+}
+
+#root {
+  background-color: #333;
+  color: ivory;
+  padding: 16px;
+}
