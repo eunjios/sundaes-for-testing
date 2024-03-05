@@ -1,7 +1,11 @@
+import OrderForm from './components/form/Form';
+import Header from './components/header/Header';
+
 function App() {
   return (
     <div>
-      <h1>Sundaes on Demand</h1>
+      <Header />
+      <OrderForm />
     </div>
   );
 }
