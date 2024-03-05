@@ -1,5 +1,11 @@
 # Sundaes for Testing
 
+<img width="628" alt="preview" src="https://github.com/eunjios/sundaes-for-testing/assets/77034159/311f3f36-c009-462e-b308-1479b6d7032c">
+
+<img width="628" alt="preview" src="https://github.com/eunjios/sundaes-for-testing/assets/77034159/bd7c6ee0-f464-4609-a16e-ff098e808ed3">
+
+
+
 ## About
 
 ### App summary
