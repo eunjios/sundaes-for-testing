@@ -4,10 +4,8 @@ import { useState } from 'react';
 import { initialScoops, initialToppings } from '../../data';
 import Scoops from './Scoops';
 import Toppings from './Toppings';
+import Text from '../ui/text/Text';
 import { form, grandTotal, order, total } from './Form.style';
-import Title1 from '../ui/texts/Title1';
-import Text1 from '../ui/texts/Text1';
-import Text2 from '../ui/texts/Text2';
 
 function OrderForm() {
   const [scoops, setScoops] = useState(initialScoops);
@@ -45,21 +43,21 @@ function OrderForm() {
 
   return (
     <form css={form}>
-      <Title1>Scoops</Title1>
+      <Text theme="title1">Scoops</Text>
       <p>$2.00 each</p>
       <Scoops scoops={scoops} changeHandler={changeScoopsHandler} />
-      <Text2 css={total}>
+      <Text theme="text2" css={total}>
         Scoops total<strong>${totalScoops.toFixed(2)}</strong>
-      </Text2>
-      <Title1>Toppings</Title1>
+      </Text>
+      <Text theme="title1">Toppings</Text>
       <p>$1.50 each</p>
       <Toppings toppings={toppings} changeHandler={changeToppingsHandler} />
-      <Text2 css={total}>
+      <Text theme="text2" css={total}>
         Toppings total<strong>${totalToppings.toFixed(2)}</strong>
-      </Text2>
-      <Text1 css={grandTotal}>
+      </Text>
+      <Text theme="text1" css={grandTotal}>
         Grand Total <strong>${(totalScoops + totalToppings).toFixed(2)}</strong>
-      </Text1>
+      </Text>
       <button css={order}>Order</button>
     </form>
   );

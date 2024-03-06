@@ -10,13 +10,19 @@ interface Props {
   isPortrait?: boolean;
 }
 
-function Thumbnail({ size, src, alt, borderRadius, isPortrait = true }: Props) {
+function Thumbnail({
+  size,
+  src,
+  alt = '썸네일',
+  borderRadius = '12px',
+  isPortrait = true,
+}: Props) {
   return (
     <div css={thumbnail} style={{ width: size, height: size, borderRadius }}>
       <img
         css={[image, isPortrait ? portrait : landscape]}
         src={src}
-        alt={alt ?? '썸네일'}
+        alt={alt}
         width="100%"
       />
     </div>

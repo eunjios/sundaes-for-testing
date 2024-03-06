@@ -3,7 +3,7 @@
 import Thumbnail from '../ui/thumbnail/Thumbnail';
 import { container, title } from './Scoops.style';
 import type { Scoop } from '../../types';
-import Label1 from '../ui/texts/Label1';
+import Text from '../ui/text/Text';
 
 interface Props {
   scoops: Scoop[];
@@ -29,7 +29,9 @@ function Scoops({ scoops, changeHandler }: Props) {
         >
           <Thumbnail src={scoop.thumbnail} size={160} />
           <div css={title}>
-            <Label1 htmlFor={scoop.id}>{scoop.title}</Label1>
+            <Text theme="label1" htmlFor={scoop.id}>
+              {scoop.title}
+            </Text>
             <input
               type="number"
               id={scoop.id}

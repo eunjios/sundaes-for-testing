@@ -3,7 +3,7 @@
 import Thumbnail from '../ui/thumbnail/Thumbnail';
 import { container, title } from './Toppings.style';
 import type { Topping } from '../../types';
-import Label2 from '../ui/texts/Label2';
+import Text from '../ui/text/Text';
 
 interface Props {
   toppings: Topping[];
@@ -23,7 +23,9 @@ function Toppings({ toppings, changeHandler }: Props) {
               checked={topping.selected}
               onChange={() => changeHandler(topping.id)}
             />
-            <Label2 htmlFor={topping.id}>{topping.title}</Label2>
+            <Text theme="label2" htmlFor={topping.id}>
+              {topping.title}
+            </Text>
           </div>
         </div>
       ))}
