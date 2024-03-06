@@ -24,11 +24,4 @@ export const grandTotal = css`
 export const order = css`
   display: block;
   margin: 0 auto;
-  width: 256px;
-  font-size: 28px;
-  padding: 8px 24px;
-  background: black;
-  color: white;
-  border: none;
-  position: relative;
 `;

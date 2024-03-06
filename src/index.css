@@ -15,6 +15,10 @@ html,
   padding: 16px;
 }
 
+button {
+  font-family: 'Afacad';
+}
+
 input[type='number']::-webkit-inner-spin-button {
   opacity: 1;
 }

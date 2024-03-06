@@ -11,3 +11,5 @@ export type Topping = {
   thumbnail: string;
   selected: boolean;
 };
+
+export type OrederPhase = 'inProgress' | 'review' | 'completed';
