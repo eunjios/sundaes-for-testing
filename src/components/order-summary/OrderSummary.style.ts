@@ -20,11 +20,3 @@ export const container = css`
 export const title = css`
   text-align: center;
 `;
-
-export const actions = css`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 32px;
-  border-top: 2px dashed lightgray;
-`;

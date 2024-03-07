@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
 import Text from '../ui/text/Text';
-import Button from '../ui/button/Button';
+import SummaryForm from './SummaryForm';
 import { UseOrderDataReturnType } from '../../hooks';
-import { actions, center, container } from './OrderSummary.style';
+import { center, container } from './OrderSummary.style';
 
 interface Props extends UseOrderDataReturnType {
   moveToInProgress: () => void;
@@ -41,14 +41,10 @@ function OrderSummary({
         <Text theme="text1">
           Total <strong>${(totalScoops + totalToppings).toFixed(2)}</strong>
         </Text>
-        <div css={actions}>
-          <Button theme="primary" onClick={moveToCompleted}>
-            Order
-          </Button>
-          <Button theme="secondary" onClick={moveToInProgress}>
-            Back
-          </Button>
-        </div>
+        <SummaryForm
+          moveToCompleted={moveToCompleted}
+          moveToInProgress={moveToInProgress}
+        />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 
 import { css } from '@emotion/react';
 
-interface Props extends React.HTMLAttributes<HTMLButtonElement> {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 
@@ -17,6 +17,7 @@ function PrimaryButton({ children, ...props }: Props) {
         background: black;
         color: white;
         border: 1px solid black;
+        cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
 
         &:hover {
           background: #333;

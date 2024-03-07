@@ -4,7 +4,6 @@ import Scoops from './Scoops';
 import Toppings from './Toppings';
 import Text from '../ui/text/Text';
 import { UseOrderDataReturnType } from '../../hooks';
-// import PrimaryButton from '../ui/button/Primary';
 import Button from '../ui/button/Button';
 import { form, grandTotal, order, total } from './Form.style';
 
@@ -43,7 +42,7 @@ function OrderForm({
       <Text theme="text1" css={grandTotal}>
         Grand Total <strong>${(totalScoops + totalToppings).toFixed(2)}</strong>
       </Text>
-      <Button theme="primary" css={order}>
+      <Button theme="primary" css={order} disabled={totalScoops === 0}>
         Order
       </Button>
     </form>

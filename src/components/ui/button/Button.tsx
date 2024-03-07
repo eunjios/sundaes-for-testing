@@ -1,7 +1,7 @@
 import PrimaryButton from './Primary';
 import SecondaryButton from './Secondary';
 
-interface Props extends React.HTMLAttributes<HTMLButtonElement> {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   theme: 'primary' | 'secondary';
   children: React.ReactNode;
 }
