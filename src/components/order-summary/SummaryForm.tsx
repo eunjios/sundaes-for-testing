@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Button from '../ui/button/Button';
 import { actions, check } from './SummaryForm.style';
+import Popover from '../ui/popover/Popover';
 
 interface Props {
   moveToCompleted: () => void;
@@ -17,11 +18,9 @@ function SummaryForm({ moveToCompleted, moveToInProgress }: Props) {
     setIsChecked(newChecked);
   };
 
-  console.log('isChecked', isChecked);
-
   return (
     <form css={actions}>
-      <div css={check}>
+      <Popover text="as you know, you cannot order" hasIcon={true} css={check}>
         <input
           type="checkbox"
           id="terms"
@@ -29,7 +28,7 @@ function SummaryForm({ moveToCompleted, moveToInProgress }: Props) {
           onChange={changeHandler}
         />
         <label htmlFor="terms">I agree to terms and conditions</label>
-      </div>
+      </Popover>
       <Button
         theme="primary"
         type="button"

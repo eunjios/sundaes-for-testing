@@ -9,6 +9,12 @@ export const actions = css`
 `;
 
 export const check = css`
+  width: fit-content;
   display: flex;
   gap: 8px;
+
+  & label,
+  input {
+    cursor: pointer;
+  }
 `;
