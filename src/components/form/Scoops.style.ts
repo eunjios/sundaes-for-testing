@@ -6,7 +6,7 @@ export const container = css`
   gap: 8px;
 `;
 
-export const scoop = css`
+export const scoopItem = css`
   display: flex;
   flex-direction: column;
   width: 100%;
