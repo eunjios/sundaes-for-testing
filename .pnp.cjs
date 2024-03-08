@@ -61,6 +61,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-bootstrap", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:2.10.1"],\
           ["react-dom", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:18.2.0"],\
+          ["react-error-boundary", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.0.13"],\
+          ["recoil", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:0.7.7"],\
           ["storybook", "npm:7.6.17"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"],\
           ["vite", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.2.0"],\
@@ -11059,6 +11061,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["hamt_plus", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "./.yarn/cache/hamt_plus-npm-1.0.2-67a52ee1df-c5aa5cc082.zip/node_modules/hamt_plus/",\
+        "packageDependencies": [\
+          ["hamt_plus", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["handlebars", [\
       ["npm:4.7.8", {\
         "packageLocation": "./.yarn/cache/handlebars-npm-4.7.8-25244c2c82-7aff423ea3.zip/node_modules/handlebars/",\
@@ -14114,6 +14125,29 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-error-boundary", [\
+      ["npm:4.0.13", {\
+        "packageLocation": "./.yarn/cache/react-error-boundary-npm-4.0.13-22e72c3a85-6f3e0e4d76.zip/node_modules/react-error-boundary/",\
+        "packageDependencies": [\
+          ["react-error-boundary", "npm:4.0.13"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.0.13", {\
+        "packageLocation": "./.yarn/__virtual__/react-error-boundary-virtual-c89fde38ba/0/cache/react-error-boundary-npm-4.0.13-22e72c3a85-6f3e0e4d76.zip/node_modules/react-error-boundary/",\
+        "packageDependencies": [\
+          ["react-error-boundary", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.0.13"],\
+          ["@babel/runtime", "npm:7.24.0"],\
+          ["@types/react", "npm:18.2.64"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-is", [\
       ["npm:16.13.1", {\
         "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-33977da7a5.zip/node_modules/react-is/",\
@@ -14388,6 +14422,37 @@ const RAW_RUNTIME_STATE =
           ["source-map", "npm:0.6.1"],\
           ["tiny-invariant", "npm:1.3.3"],\
           ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["recoil", [\
+      ["npm:0.7.7", {\
+        "packageLocation": "./.yarn/cache/recoil-npm-0.7.7-4452f58b67-630a73b0bd.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "npm:0.7.7"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:0.7.7", {\
+        "packageLocation": "./.yarn/__virtual__/recoil-virtual-9e06792311/0/cache/recoil-npm-0.7.7-4452f58b67-630a73b0bd.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:0.7.7"],\
+          ["@types/react", "npm:18.2.64"],\
+          ["@types/react-dom", "npm:18.2.21"],\
+          ["@types/react-native", null],\
+          ["hamt_plus", "npm:1.0.2"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:18.2.0"],\
+          ["react-native", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react-native",\
+          "@types/react",\
+          "react-dom",\
+          "react-native",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15300,6 +15365,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-bootstrap", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:2.10.1"],\
           ["react-dom", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:18.2.0"],\
+          ["react-error-boundary", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.0.13"],\
+          ["recoil", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:0.7.7"],\
           ["storybook", "npm:7.6.17"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"],\
           ["vite", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.2.0"],\
