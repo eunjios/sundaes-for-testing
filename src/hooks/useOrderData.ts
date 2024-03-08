@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import { initialScoops, initialToppings } from '../data';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { scoopsAtom, toppingsAtom } from '../recoil/atoms';
+import { scoopsSelector, toppingsSelector } from '../recoil/selectors';
 import { Scoop, Topping } from '../types';
 
 const useOrderData = () => {
-  const [scoops, setScoops] = useState(initialScoops);
-  const [toppings, setToppings] = useState(initialToppings);
+  const [scoops, setScoops] = useRecoilState(scoopsAtom);
+  const [toppings, setToppings] = useRecoilState(toppingsAtom);
+  const initialScoops = useRecoilValue(scoopsSelector);
+  const initialToppings = useRecoilValue(toppingsSelector);
 
   const selectedScoops = scoops.filter((scoop) => scoop.count > 0);
 
