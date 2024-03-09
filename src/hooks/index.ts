@@ -1,5 +1,4 @@
-import useOrderData, { UseOrderDataReturnType } from './useOrderData';
 import useOrderPhase, { UseOrderPhaseReturnType } from './useOrderPhase';
 
-export { useOrderData, useOrderPhase };
-export type { UseOrderDataReturnType, UseOrderPhaseReturnType };
+export { useOrderPhase };
+export type { UseOrderPhaseReturnType };

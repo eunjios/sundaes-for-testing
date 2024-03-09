@@ -1,27 +1,39 @@
 /** @jsxImportSource @emotion/react */
 
+import { useRecoilState } from 'recoil';
 import Thumbnail from '../ui/thumbnail/Thumbnail';
-import { container, title } from './Toppings.style';
-import type { Topping } from '../../types';
 import Text from '../ui/text/Text';
+import { toppingsAtom } from '../../recoil/atoms';
+import { container, title } from './Toppings.style';
 
-interface Props {
-  toppings: Topping[];
-  changeHandler: (id: string) => void;
-}
+function Toppings() {
+  const [toppings, setToppings] = useRecoilState(toppingsAtom);
 
-function Toppings({ toppings, changeHandler }: Props) {
+  const changeToppingsHandler = (id: string) => {
+    setToppings((prevToppings) =>
+      prevToppings.map((topping) =>
+        topping.id === id
+          ? { ...topping, selected: !topping.selected }
+          : topping,
+      ),
+    );
+  };
+
   return (
     <div css={container}>
       {toppings.map((topping) => (
         <div key={topping.id}>
-          <Thumbnail src={topping.thumbnail} size={160} />
+          <Thumbnail
+            src={topping.thumbnail}
+            size={160}
+            alt={`${topping.title} topping`}
+          />
           <div css={title}>
             <input
               type="checkbox"
               id={topping.id}
               checked={topping.selected}
-              onChange={() => changeHandler(topping.id)}
+              onChange={() => changeToppingsHandler(topping.id)}
             />
             <Text theme="label2" htmlFor={topping.id}>
               {topping.title}

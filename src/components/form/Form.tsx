@@ -1,25 +1,22 @@
 /** @jsxImportSource @emotion/react */
 
+import { useRecoilValue } from 'recoil';
 import Scoops from './Scoops';
 import Toppings from './Toppings';
 import Text from '../ui/text/Text';
-import { UseOrderDataReturnType } from '../../hooks';
 import Button from '../ui/button/Button';
+import { totalAll, totalScoops, totalToppings } from '../../recoil/selectors';
 import { form, grandTotal, order, total } from './Form.style';
 
-interface Props extends UseOrderDataReturnType {
+interface Props {
   moveToReview: () => void;
 }
 
-function OrderForm({
-  scoops,
-  toppings,
-  totalScoops,
-  totalToppings,
-  changeScoopsHandler,
-  changeToppingsHandler,
-  moveToReview,
-}: Props) {
+function OrderForm({ moveToReview }: Props) {
+  const totalScoopsAmount = useRecoilValue(totalScoops);
+  const totalToppingsAmount = useRecoilValue(totalToppings);
+  const totalAllAmount = useRecoilValue(totalAll);
+
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
     moveToReview();
@@ -29,20 +26,20 @@ function OrderForm({
     <form css={form} onSubmit={submitHandler}>
       <Text theme="title1">Scoops</Text>
       <p>$2.00 each</p>
-      <Scoops scoops={scoops} changeHandler={changeScoopsHandler} />
+      <Scoops />
       <Text theme="text2" css={total}>
-        Scoops total<strong>${totalScoops.toFixed(2)}</strong>
+        Scoops total<strong>${totalScoopsAmount.toFixed(2)}</strong>
       </Text>
       <Text theme="title1">Toppings</Text>
       <p>$1.50 each</p>
-      <Toppings toppings={toppings} changeHandler={changeToppingsHandler} />
+      <Toppings />
       <Text theme="text2" css={total}>
-        Toppings total<strong>${totalToppings.toFixed(2)}</strong>
+        Toppings total<strong>${totalToppingsAmount.toFixed(2)}</strong>
       </Text>
       <Text theme="text1" css={grandTotal}>
-        Grand Total <strong>${(totalScoops + totalToppings).toFixed(2)}</strong>
+        Grand Total <strong>${totalAllAmount.toFixed(2)}</strong>
       </Text>
-      <Button theme="primary" css={order} disabled={totalScoops === 0}>
+      <Button theme="primary" css={order} disabled={totalScoopsAmount === 0}>
         Order
       </Button>
     </form>

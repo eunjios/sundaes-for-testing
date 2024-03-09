@@ -1,12 +1,12 @@
 import { atom } from 'recoil';
-import { scoopsSelector, toppingsSelector } from './selectors';
+import { fetchedScoops, fetchedToppings } from './selectors';
 
 export const scoopsAtom = atom({
   key: 'scoopsAtom',
-  default: scoopsSelector,
+  default: fetchedScoops,
 });
 
 export const toppingsAtom = atom({
   key: 'toppingsAtom',
-  default: toppingsSelector,
+  default: fetchedToppings,
 });

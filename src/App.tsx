@@ -4,10 +4,9 @@ import Header from './components/header/Header';
 import OrderForm from './components/form/Form';
 import OrderSummary from './components/order-summary/OrderSummary';
 import Completed from './components/completed/Completed';
-import { useOrderData, useOrderPhase } from './hooks';
+import { useOrderPhase } from './hooks';
 
 function App() {
-  const data = useOrderData();
   const { phase, moveToInProgress, moveToReview, moveToCompleted } =
     useOrderPhase();
 
@@ -16,7 +15,7 @@ function App() {
       return (
         <div>
           <Header />
-          <OrderForm {...data} moveToReview={moveToReview} />
+          <OrderForm moveToReview={moveToReview} />
         </div>
       );
 
@@ -25,7 +24,6 @@ function App() {
         <div>
           <Header />
           <OrderSummary
-            {...data}
             moveToInProgress={moveToInProgress}
             moveToCompleted={moveToCompleted}
           />
@@ -36,10 +34,7 @@ function App() {
       return (
         <div>
           <Header />
-          <Completed
-            moveToInProgress={moveToInProgress}
-            resetOrder={data.resetOrder}
-          />
+          <Completed moveToInProgress={moveToInProgress} />
         </div>
       );
   }

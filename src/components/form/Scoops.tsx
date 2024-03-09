@@ -1,19 +1,26 @@
 /** @jsxImportSource @emotion/react */
 
+import { useRecoilState } from 'recoil';
 import Thumbnail from '../ui/thumbnail/Thumbnail';
-import { container, scoopItem, title } from './Scoops.style';
-import type { Scoop } from '../../types';
 import Text from '../ui/text/Text';
+import { scoopsAtom } from '../../recoil/atoms';
+import { container, scoopItem, title } from './Scoops.style';
 
-interface Props {
-  scoops: Scoop[];
-  changeHandler: (
+function Scoops() {
+  const [scoops, setScoops] = useRecoilState(scoopsAtom);
+
+  const changeScoopsHandler = (
     id: string,
     event: React.ChangeEvent<HTMLInputElement>,
-  ) => void;
-}
+  ) => {
+    const newCount = Number(event.target.value);
+    setScoops((prevScoops) =>
+      prevScoops.map((scoop) =>
+        scoop.id === id ? { ...scoop, count: newCount } : scoop,
+      ),
+    );
+  };
 
-function Scoops({ scoops, changeHandler }: Props) {
   return (
     <div css={container}>
       {scoops.map((scoop) => (
@@ -32,7 +39,7 @@ function Scoops({ scoops, changeHandler }: Props) {
               id={scoop.id}
               min={0}
               value={scoop.count}
-              onChange={(event) => changeHandler(scoop.id, event)}
+              onChange={(event) => changeScoopsHandler(scoop.id, event)}
             />
           </div>
         </div>
