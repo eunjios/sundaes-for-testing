@@ -38,4 +38,8 @@ export const tooltip = (
   background: ${background};
   color: ${color};
   ${stylesBySize[size]}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 `;

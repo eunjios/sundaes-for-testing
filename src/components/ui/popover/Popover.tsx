@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { useState } from 'react';
+import { IoMdInformationCircle } from 'react-icons/io';
 import { container, tooltip } from './Popover.style';
 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
@@ -33,7 +34,7 @@ function Popover({
       {children}
       {isOpen && (
         <span css={tooltip(size, background, color)}>
-          {hasIcon && '✴ '}
+          {hasIcon && <IoMdInformationCircle />}
           {text}
         </span>
       )}
