@@ -49,6 +49,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/ui", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:1.3.1"],\
           ["axios", "npm:1.6.7"],\
           ["bootstrap", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:5.3.3"],\
+          ["chromatic", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:11.0.7"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-plugin-jest-dom", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:5.1.0"],\
           ["eslint-plugin-react-hooks", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.6.0"],\
@@ -8876,6 +8877,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["chromatic", [\
+      ["npm:11.0.7", {\
+        "packageLocation": "./.yarn/cache/chromatic-npm-11.0.7-f151d81015-9d852b2a46.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "npm:11.0.7"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:11.0.7", {\
+        "packageLocation": "./.yarn/__virtual__/chromatic-virtual-74dde66349/0/cache/chromatic-npm-11.0.7-f151d81015-9d852b2a46.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:11.0.7"],\
+          ["@chromatic-com/cypress", null],\
+          ["@chromatic-com/playwright", null],\
+          ["@types/chromatic-com__cypress", null],\
+          ["@types/chromatic-com__playwright", null]\
+        ],\
+        "packagePeers": [\
+          "@chromatic-com/cypress",\
+          "@chromatic-com/playwright",\
+          "@types/chromatic-com__cypress",\
+          "@types/chromatic-com__playwright"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["ci-info", [\
       ["npm:3.9.0", {\
         "packageLocation": "./.yarn/cache/ci-info-npm-3.9.0-646784ca0e-6f0109e36e.zip/node_modules/ci-info/",\
@@ -15376,6 +15403,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/ui", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:1.3.1"],\
           ["axios", "npm:1.6.7"],\
           ["bootstrap", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:5.3.3"],\
+          ["chromatic", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:11.0.7"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-plugin-jest-dom", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:5.1.0"],\
           ["eslint-plugin-react-hooks", "virtual:da3a9320025f377a1f4c3cd63dedf6f459281328e59c6099982d6116645d627c5388c90417a00b3d2a7f47ddae9d796e061be411b768e0568561a227995c980c#npm:4.6.0"],\
