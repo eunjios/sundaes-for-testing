@@ -22,17 +22,17 @@ export const handlers = [
   http.get('http://localhost:3030/toppings', () => {
     return HttpResponse.json([
       {
-        id: 'chocolate-covered-pretzels',
-        title: 'Chocolate covered pretzels',
+        id: 'marshmallows',
+        title: 'Marshmallows',
         thumbnail:
-          'https://hips.hearstapps.com/del.h-cdn.co/assets/15/29/delish-ice-cream-toppings38.jpg?crop=1xw:0.9991735537190083xh;center,top&resize=980:*',
+          'https://hips.hearstapps.com/del.h-cdn.co/assets/15/29/delish-ice-cream-toppings1.jpg?crop=1xw:0.9991735537190083xh;center,top&resize=980:*',
         selected: false,
       },
       {
-        id: 'peanuts',
-        title: 'Honey-Roasted Peanuts',
+        id: 'jam',
+        title: 'Jam',
         thumbnail:
-          'https://hips.hearstapps.com/del.h-cdn.co/assets/15/29/delish-ice-cream-toppings26.jpg?crop=1xw:0.9991735537190083xh;center,top&resize=980:*',
+          'https://hips.hearstapps.com/del.h-cdn.co/assets/15/29/delish-ice-cream-toppings24.jpg?crop=1xw:0.9991735537190083xh;center,top&resize=980:*',
         selected: false,
       },
     ]);
